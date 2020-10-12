@@ -1,0 +1,51 @@
+@import "./theme.scss";
+
+.appRoot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        url("../img/bg.jpg");
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: $fg0;
+    text-align: center;
+    .headerContainer {
+        margin-right: auto;
+        margin-left: auto;
+        display:inline-block;
+    }
+    h1 {
+        padding: 8px;
+        color: $fg0;
+        font-size: 48px;
+        background: #000000aa;
+        display: inline-block;
+        margin-right: 80px;
+        backdrop-filter: grayscale(1);
+        backdrop-filter: blur(6px);
+    }
+    h2 {
+        padding: 8px;
+        color: $bg0;
+        margin-left: 80px;
+        display: block;
+        font-size: 36px;
+        background: #BA9C9Aaa;
+        margin-bottom: 100px;
+    }
+}
+
+.appContent-main {
+    backdrop-filter: blur(10px);
+    background: transparent; 
+    height: 100vh;
+    text-align: center;
+}
+@-moz-document url-prefix() {
+    .appContent-main {
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.3938852285409903) 100%);        
+    }
+}
+
+
