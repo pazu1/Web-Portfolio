@@ -1,0 +1,10 @@
+@import "./theme.scss";
+
+.navBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* required */
+    z-index: 2;
+    width: 100%;
+    height: 74px;
+}

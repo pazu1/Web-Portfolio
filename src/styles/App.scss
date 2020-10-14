@@ -3,10 +3,10 @@
 .appRoot {
     position: absolute;
     width: 100%;
-    height: 100%;
     background-image:
-        url("../img/bg.jpg");
-    background-size: cover; /* Resize the background image to cover the entire container */
+        url("../img/bg-full.jpg");
+    background-size: contain; /* Resize the background image to cover the entire container */
+    background-repeat: repeat-x;
     color: $fg0;
     text-align: center;
     .headerContainer {
@@ -23,6 +23,7 @@
         margin-right: 80px;
         backdrop-filter: grayscale(1);
         backdrop-filter: blur(6px);
+        user-select: none;
     }
     h2 {
         padding: 8px;
@@ -32,20 +33,27 @@
         font-size: 36px;
         background: #BA9C9Aaa;
         margin-bottom: 100px;
+        user-select: none;
     }
 }
 
 .appContent-main {
     backdrop-filter: blur(10px);
     background: transparent; 
-    height: 100vh;
+    height: 100%;
     text-align: center;
 }
 @-moz-document url-prefix() {
     .appContent-main {
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.3938852285409903) 100%);        
+        background: $bg0;
+        /*background: rgb(12,34,40);
+        /* background: linear-gradient(0deg, rgba(12,34,40,1) 0%, rgba(12,34,40,0.9929058837890625) 47%, rgba(12,34,40,0.6964352955537684) 100%); */
     }
 }
 
+@media only screen and (max-width: 1024px){
+    #appRoot {
+        background-size: 1024px auto;
+    }
+}
 
