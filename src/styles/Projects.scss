@@ -50,7 +50,21 @@
     .preview {
         color: $acc0;
         background-size: cover; 
+        background-repeat: none;
+        animation-name: MOVE-BG;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
+}
+@keyframes MOVE-BG {
+   from {
+     background-position: calc(0%) calc(0%);
+   }
+   to { 
+     background-position: calc(100%) calc(100%);
+   }
 }
 button {
     display: inline-block;

@@ -49,15 +49,19 @@ function PrCard(props) {
             <div className="sidebar">
                 {description}
                 {site ? (
-                    <button className="webBtn">
-                        <LinkExternalIcon />
-                        Live website
-                    </button>
+                    <a href={site} target="_blank" rel="noopener noreferrer">
+                        <button className="webBtn">
+                            <LinkExternalIcon />
+                            Live website
+                        </button>
+                    </a>
                 ) : null}
-                <button className="ghBtn">
-                    <MarkGithubIcon />
-                    Source code
-                </button>
+                <a href={source} target="_blank" rel="noopener noreferrer">
+                    <button className="ghBtn">
+                        <MarkGithubIcon />
+                        Source code
+                    </button>
+                </a>
             </div>
         </animated.div>
     );
