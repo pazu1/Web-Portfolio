@@ -1,21 +1,16 @@
 import React from "react";
 import "../styles/Projects.scss";
+import { prcards } from "../prcards";
 
 import PrCard from "./PrCard";
 
 // TODO: fetch project cards' data from json file or similar
 
 function Projects() {
+    const cardComponents = prcards.map((c, i) => <PrCard data={c} />);
     return (
         <div className="projects">
-            <h3 className="projectHeader">My projects</h3>
-            <div className="cardGrid">
-                <PrCard />
-                <PrCard />
-                <PrCard />
-                <PrCard />
-                <PrCard />
-            </div>
+            <div className="cardGrid">{cardComponents}</div>
         </div>
     );
 }

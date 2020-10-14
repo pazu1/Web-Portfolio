@@ -12,6 +12,7 @@ function App() {
                 <h2>Full-Stack Developer</h2>
             </div>
             <div className="appContent-main">
+                <br />
                 <NavBar />
                 <br />
                 <Projects />

@@ -10,7 +10,8 @@ const trans = (x, y, s) =>
         y / 10
     }deg) scale(${s})`;
 
-function PrCard() {
+function PrCard(props) {
+    const { title, img, site, labels, source, description } = props.data;
     const [aniProps, set] = useSpring(() => ({
         xys: [0, 0, 1],
         config: { mass: 5, tension: 350, friction: 40 },
@@ -33,15 +34,26 @@ function PrCard() {
             onMouseLeave={() => set({ xys: [0, 0, 1] })}
             style={{ transform: aniProps.xys.interpolate(trans) }}
         >
-            <div className="preview">void</div>
+            <div
+                style={
+                    img
+                        ? {
+                              backgroundImage: `url(${img})`,
+                          }
+                        : null
+                }
+                className="preview"
+            >
+                {!img ? title : null}
+            </div>
             <div className="sidebar">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                feugiat nulla erat, vitae congue massa porta at. In quis dolor
-                enim.
-                <button className="webBtn">
-                    <LinkExternalIcon />
-                    Live website
-                </button>
+                {description}
+                {site ? (
+                    <button className="webBtn">
+                        <LinkExternalIcon />
+                        Live website
+                    </button>
+                ) : null}
                 <button className="ghBtn">
                     <MarkGithubIcon />
                     Source code
