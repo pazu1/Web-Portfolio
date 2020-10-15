@@ -13,15 +13,16 @@
         display: inline;
         left: 0px;
     }
-    a {
-        color: $fg0;
-        text-decoration: none;
-    }
 }
 .buttonsContainer {
     font-size: 1.2em;
     display: flex;
-    width: 100%;
+    width: 50%;
     flex-direction: row;
     justify-content: space-around;
+    a {
+        color: $fg0;
+        text-decoration: none;
+        user-select: none;
+    }
 }

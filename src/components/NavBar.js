@@ -1,34 +1,64 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { PAGES } from "./App";
+import { Transition } from "react-spring/renderprops";
 
 import "../styles/NavBar.scss";
 
+const NAVPATHS = [
+    { s: "My projects", p: "/" },
+    { s: "Contact me", p: "/contact" },
+    { s: "About", p: "/about" },
+];
+
 function NavBar({ history }) {
-    const [selectedNav, setNav] = useState(PAGES.PROJECTS);
+    const [selectedNav, setNav] = useState("/");
     history.listen((location) => {
         setNav(location.pathname);
     });
     return (
         <div className="navBar">
-            {selectedNav === PAGES.PROJECTS ? (
-                <h3>My projects</h3>
-            ) : selectedNav === PAGES.CONTACT ? (
-                <h3>Contact me</h3>
-            ) : (
-                <h3>About</h3>
-            )}
+            {NAVPATHS.map((obj) => {
+                let show = obj.p === selectedNav;
+                return (
+                    <Transition
+                        items={show}
+                        from={{ opacity: 0, transform: "rotateX(180deg)" }}
+                        enter={{ opacity: 1, transform: "rotateX(0deg)" }}
+                        leave={[{ display: "none" }]}
+                    >
+                        {(show) =>
+                            show &&
+                            ((props) => (
+                                <h3 style={props} to={obj.p}>
+                                    {obj.s}
+                                </h3>
+                            ))
+                        }
+                    </Transition>
+                );
+            })}
 
             <div className="buttonsContainer">
-                <Link to={PAGES.PROJECTS}>
-                    <span>My projects</span>
-                </Link>
-                <Link to={PAGES.CONTACT}>
-                    <span>Contact me</span>
-                </Link>
-                <Link to={PAGES.ABOUT}>
-                    <span>About</span>
-                </Link>
+                {NAVPATHS.map((obj) => {
+                    let show = obj.p !== selectedNav;
+                    return (
+                        <Transition
+                            items={show}
+                            from={{ opacity: 0 }}
+                            enter={{ opacity: 1 }}
+                            leave={{ display: "none" }}
+                        >
+                            {(show) =>
+                                show &&
+                                ((props) => (
+                                    <Link style={props} to={obj.p}>
+                                        {obj.s}
+                                    </Link>
+                                ))
+                            }
+                        </Transition>
+                    );
+                })}
             </div>
         </div>
     );
