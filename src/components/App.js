@@ -1,8 +1,15 @@
 import React from "react";
-import "../styles/App.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "../styles/App.scss";
 import Projects from "./Projects";
 import NavBar from "./NavBar";
+
+export const PAGES = {
+    PROJECTS: "/",
+    CONTACT: "/contact",
+    ABOUT: "/about",
+};
 
 function App() {
     return (
@@ -12,11 +19,20 @@ function App() {
                 <h2>Full-Stack Developer</h2>
             </div>
             <div className="appContent-main">
-                <br />
-                <NavBar />
-                <br />
-                <Projects />
-                <br />
+                <Router>
+                    <br />
+                    <NavBar />
+                    <Switch>
+                        <Route path={PAGES.CONTACT}>
+                            <div style={{ height: "100vh" }}>null</div>
+                        </Route>
+                        <Route path={PAGES.PROJECTS}>
+                            <br />
+                            <Projects />
+                            <br />
+                        </Route>
+                    </Switch>
+                </Router>
             </div>
         </div>
     );

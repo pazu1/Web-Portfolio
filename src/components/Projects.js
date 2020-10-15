@@ -4,8 +4,6 @@ import { prcards } from "../prcards";
 
 import PrCard from "./PrCard";
 
-// TODO: fetch project cards' data from json file or similar
-
 function Projects() {
     const cardComponents = prcards.map((c, i) => <PrCard data={c} />);
     return (

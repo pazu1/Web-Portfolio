@@ -3,9 +3,25 @@
 .navBar {
     width: 74%;
     margin: auto;
+    display: flex;
+    align-items: center;
     h3 {
         font-size: 48px;
+        min-width: 300px;
         text-align: left;
         user-select: none;
+        display: inline;
+        left: 0px;
     }
+    a {
+        color: $fg0;
+        text-decoration: none;
+    }
+}
+.buttonsContainer {
+    font-size: 1.2em;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
 }
