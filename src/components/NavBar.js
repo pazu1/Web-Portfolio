@@ -11,7 +11,8 @@ const NAVPATHS = [
 ];
 
 function NavBar({ history }) {
-    const [selectedNav, setNav] = useState("/");
+    const url = window.location.href;
+    const [selectedNav, setNav] = useState(url.substr(url.lastIndexOf("/")));
     history.listen((location) => {
         setNav(location.pathname);
     });
@@ -52,7 +53,7 @@ function NavBar({ history }) {
                                 show &&
                                 ((props) => (
                                     <Link style={props} to={obj.p}>
-                                        {obj.s}
+                                        <strong>{obj.s}</strong>
                                     </Link>
                                 ))
                             }

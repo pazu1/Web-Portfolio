@@ -17,12 +17,18 @@
 .buttonsContainer {
     font-size: 1.2em;
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
     a {
         color: $fg0;
         text-decoration: none;
         user-select: none;
+        padding: 20px;
+          transition: all 0.2s;
+
+    }
+    a:hover {
+        transform: scale(1.2)
     }
 }

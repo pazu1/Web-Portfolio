@@ -23,6 +23,9 @@ function App() {
                     <br />
                     <NavBar />
                     <Switch>
+                        <Route path={PAGES.ABOUT}>
+                            <div style={{ height: "100vh" }}>void</div>
+                        </Route>
                         <Route path={PAGES.CONTACT}>
                             <div style={{ height: "100vh" }}>null</div>
                         </Route>
