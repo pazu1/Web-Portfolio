@@ -10,9 +10,8 @@ const NAVPATHS = [
     { s: "About", p: "/about" },
 ];
 
-function NavBar({ history }) {
-    const url = window.location.href;
-    const [selectedNav, setNav] = useState(url.substr(url.lastIndexOf("/")));
+function NavBar({ history, location }) {
+    const [selectedNav, setNav] = useState(location.pathname);
     history.listen((location) => {
         setNav(location.pathname);
     });
@@ -21,6 +20,7 @@ function NavBar({ history }) {
             {NAVPATHS.map((obj) => {
                 let show = obj.p === selectedNav;
                 return (
+                    // place the headers on top of each other to have a complete flip animation
                     <Transition
                         items={show}
                         from={{ opacity: 0, transform: "rotateX(180deg)" }}

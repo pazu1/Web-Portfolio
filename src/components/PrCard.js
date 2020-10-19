@@ -3,6 +3,15 @@ import { useSpring, animated } from "react-spring";
 import { MarkGithubIcon, LinkExternalIcon } from "@primer/octicons-react";
 import "../styles/Projects.scss";
 
+const LABELS = {
+    react: "react-logo.png",
+    nodejs: "nodejs-logo.png",
+    expressjs: "expressjs-logo.png",
+    psql: "psql-logo.png",
+    "C++": "cpp-logo.png",
+    QML: "qml-logo.png",
+};
+
 const orig = (bb) => [bb.x + bb.width / 2, bb.y + bb.height / 2];
 const calc = (x, y, o) => [-(y - o[1]) / 20, (x - o[0]) / 20, 1.05];
 const trans = (x, y, s) =>
@@ -48,6 +57,12 @@ function PrCard(props) {
             </div>
             <div className="sidebar">
                 {description}
+                <table className="imgContainer">
+                    {" "}
+                    {labels.map((l) => (
+                        <img width="32px" src={LABELS[l]} alt={l}></img>
+                    ))}
+                </table>
                 {site ? (
                     <a href={site} target="_blank" rel="noopener noreferrer">
                         <button className="webBtn">

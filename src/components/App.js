@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "../styles/App.scss";
 import Projects from "./Projects";
 import NavBar from "./NavBar";
+import Contact from "./Contact";
 
 export const PAGES = {
     PROJECTS: "/",
@@ -27,7 +28,7 @@ function App() {
                             <div style={{ height: "100vh" }}>void</div>
                         </Route>
                         <Route path={PAGES.CONTACT}>
-                            <div style={{ height: "100vh" }}>null</div>
+                            <Contact />
                         </Route>
                         <Route path={PAGES.PROJECTS}>
                             <br />

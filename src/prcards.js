@@ -21,13 +21,14 @@ export const prcards = [
         description: "Gym Log demo application for Android.",
         img: "gymlog.gif",
         labels: ["C++", "QML"],
+        img: "qmlgym-preview.png",
         source: "https://github.com/pazu1/QML-Gym-Log",
     },
     {
         title: "This portfolio page",
         description:
             "The source code of this portfiolio page is available on my GitHub",
-        labels: ["React"],
+        labels: ["react"],
         source: "https://github.com/pazu1/Web-Portfolio",
     },
 ];
