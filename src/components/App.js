@@ -5,13 +5,14 @@ import "../styles/App.scss";
 import Projects from "./Projects";
 import NavBar from "./NavBar";
 import Contact from "./Contact";
+import About from "./About";
 
 export const PAGES = {
     PROJECTS: "/",
     CONTACT: "/contact",
     ABOUT: "/about",
 };
-
+// <div style={{ height: "100vh" }}>void</div>
 function App() {
     return (
         <div className="appRoot" id="appRoot">
@@ -25,7 +26,7 @@ function App() {
                     <NavBar />
                     <Switch>
                         <Route path={PAGES.ABOUT}>
-                            <div style={{ height: "100vh" }}>void</div>
+                            <About />
                         </Route>
                         <Route path={PAGES.CONTACT}>
                             <Contact />
