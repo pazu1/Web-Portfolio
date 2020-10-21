@@ -12,13 +12,17 @@ export const PAGES = {
     CONTACT: "/contact",
     ABOUT: "/about",
 };
-// <div style={{ height: "100vh" }}>void</div>
 function App() {
     return (
         <div className="appRoot" id="appRoot">
             <div className="headerContainer">
-                <h1>FName LName</h1>
-                <h2>Full-Stack Developer</h2>
+                <h1>Salle Helevä</h1>
+                <br />
+                <h2>Software Developer</h2>{" "}
+                {/* TODO put a quirky animation here
+                    Programmer
+                    Student
+                */}
             </div>
             <div className="appContent-main">
                 <Router>
@@ -26,12 +30,17 @@ function App() {
                     <NavBar />
                     <Switch>
                         <Route path={PAGES.ABOUT}>
+                            <br />
+                            <br />
                             <About />
                         </Route>
                         <Route path={PAGES.CONTACT}>
+                            <br />
+                            <br />
                             <Contact />
                         </Route>
                         <Route path={PAGES.PROJECTS}>
+                            <br />
                             <br />
                             <Projects />
                             <br />

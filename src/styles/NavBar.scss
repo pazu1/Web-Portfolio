@@ -5,20 +5,35 @@
     margin: auto;
     display: flex;
     align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-direction: row;
+    @media screen and (max-width: $small) {
+        flex-direction: column;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
     h3 {
+        width: 100%;
+        max-width: 300px;
         font-size: 48px;
-        min-width: 300px;
         text-align: left;
         user-select: none;
-        display: inline;
-        left: 0px;
+        display: table-caption;
     }
+}
+.overflowIndicator {
+    height: 100%;
 }
 .buttonsContainer {
     font-size: 1.2em;
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-direction: row;
+    @media screen and (max-width: $tiny) {
+        flex-direction: column;
+    }
     justify-content: space-around;
     a {
         color: $fg0;

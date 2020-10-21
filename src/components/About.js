@@ -10,13 +10,12 @@ function About() {
                     Hi!
                     <br />
                     <br />
-                    I'm a student of Information Technology with a major in
-                    programming. My main interest is developing software for the
-                    web.
+                    I'm a student of Information Technology, majoring in
+                    software engineering. My main interest is Web based software
+                    development.
                     <br />
                     <br />
-                    This is my portfolio page for displaying some of my
-                    projects.
+                    This is my portfolio page displaying some of my projects.
                 </p>
             </div>
         </div>

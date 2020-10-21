@@ -9,6 +9,7 @@ function Projects() {
     return (
         <div className="projects">
             <div className="cardGrid">{cardComponents}</div>
+            <br />
         </div>
     );
 }
