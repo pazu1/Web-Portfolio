@@ -11,7 +11,7 @@ function About() {
                     <br />
                     <br />
                     I'm a student of Information Technology, majoring in
-                    software engineering. My main interest is Web based software
+                    Software Engineering. My main interest is Web based software
                     development.
                     <br />
                     <br />

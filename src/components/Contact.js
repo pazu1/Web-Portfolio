@@ -13,7 +13,9 @@ function Contact() {
                         Use this handy contact form to get in touch with me.
                         <br />
                         Or send me an email directly at:
-                        myemail@emailprovider.com
+                        <br />
+                        <br />
+                        <a href="mailto: salle@hotmail.fi">salle@hotmail.fi</a>
                     </div>
                 </div>
                 <div className="formContainer">

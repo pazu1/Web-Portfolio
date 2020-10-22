@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import NavBar from "./NavBar";
 import Contact from "./Contact";
 import About from "./About";
+import AnimatedHeader from "./AnimatedHeader";
 
 export const PAGES = {
     PROJECTS: "/",
@@ -18,11 +19,9 @@ function App() {
             <div className="headerContainer">
                 <h1>Salle Helevä</h1>
                 <br />
-                <h2>Software Developer</h2>{" "}
-                {/* TODO put a quirky animation here
-                    Programmer
-                    Student
-                */}
+                <AnimatedHeader
+                    headers={["student", "programmer", "software developer"]}
+                />
             </div>
             <div className="appContent-main">
                 <Router>
