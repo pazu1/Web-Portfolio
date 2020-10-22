@@ -24,8 +24,10 @@ function FSForm(props) {
     };
     const [showNameLbl, setShowNameLbl] = useState(false);
     const [showEmailLbl, setShowEmailLbl] = useState(false);
+    const [showMsgLbl, setShowMsgLbl] = useState(false);
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [msg, setMsg] = useState("");
     const show = submitStatus === "NONE";
     return (
         <Transition
@@ -88,13 +90,27 @@ function FSForm(props) {
                                       setEmail(e.target.value);
                                   }}
                               />
-                              <label for="textarea">Message</label>
+                              <label
+                                  style={{ opacity: showMsgLbl ? 1 : 0 }}
+                                  for="textarea"
+                              >
+                                  Message
+                              </label>
                               <textarea
                                   required
                                   form="contactform"
                                   id="textarea"
                                   name="textarea"
                                   maxLength="680"
+                                  placeholder={showMsgLbl ? "" : "Message"}
+                                  onFocus={() => setShowMsgLbl(true)}
+                                  onBlur={() => {
+                                      if (!msg.length) setShowMsgLbl(false);
+                                  }}
+                                  value={msg}
+                                  onChange={(e) => {
+                                      setMsg(e.target.value);
+                                  }}
                               />
                               <br />
                               <div>
