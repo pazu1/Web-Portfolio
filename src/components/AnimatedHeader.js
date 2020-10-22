@@ -6,7 +6,7 @@ import "../styles/AnimatedHeader.scss";
 const DELAY = 3400;
 function AnimatedHeader(props) {
     const { headers } = props;
-    const text = [];
+    const text = ["", DELAY / 3];
     headers.forEach((h) => {
         text.push(h);
         text.push(DELAY);

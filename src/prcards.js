@@ -1,8 +1,7 @@
 export const prcards = [
     {
         title: "Simple Kanban",
-        description:
-            "Simple Kanban-board web-application for managing projects.",
+        description: "Kanban-board web-application for managing projects.",
         img: "kanban-demo.gif",
         site: "https://simple-kanban.xyz/",
         labels: ["react", "nodejs", "expressjs", "psql"],

@@ -20,7 +20,7 @@ function App() {
                 <h1>Salle Helevä</h1>
                 <br />
                 <AnimatedHeader
-                    headers={["student", "programmer", "software developer"]}
+                    headers={["student", "programmer", "developer"]}
                 />
             </div>
             <div className="appContent-main">

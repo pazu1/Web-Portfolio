@@ -6,8 +6,8 @@ import "../styles/NavBar.scss";
 
 const NAVPATHS = [
     { s: "My projects", p: "/" },
-    { s: "Contact me", p: "/contact" },
     { s: "About", p: "/about" },
+    { s: "Contact me", p: "/contact" },
 ];
 
 function NavBar({ history, location }) {
