@@ -125,7 +125,11 @@ function FSForm(props) {
                                       <span>
                                           <CheckCircleIcon size={48} />
                                       </span>{" "}
-                                      <p>Message was sent successfully.</p>
+                                      <p>
+                                          Message was sent successfully.
+                                          <br />I will respond as soon as
+                                          possible!.
+                                      </p>
                                   </>
                               ) : (
                                   <>
@@ -133,21 +137,25 @@ function FSForm(props) {
                                           <XCircleIcon size={48} />
                                       </span>
                                       <p>
-                                          Could not send message. Please make
-                                          sure you entered a valid email
-                                          address.
+                                          Could not send message.
+                                          <br />
+                                          Please make sure you entered a valid
+                                          email address.
                                       </p>
-                                      <button
-                                          style={{
-                                              width: "60px",
-                                              marginTop: "15px",
-                                          }}
-                                          onClick={() =>
-                                              setSubmitStatus("NONE")
-                                          }
-                                      >
-                                          Try again
-                                      </button>
+                                      <div>
+                                          <button
+                                              style={{
+                                                  width: "60px",
+                                                  margin: "auto",
+                                                  marginTop: "15px",
+                                              }}
+                                              onClick={() =>
+                                                  setSubmitStatus("NONE")
+                                              }
+                                          >
+                                              Try again
+                                          </button>
+                                      </div>
                                   </>
                               )}
                           </div>

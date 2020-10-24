@@ -6,7 +6,7 @@ import FSForm from "./FSForm";
 function Contact() {
     const [submitStatus, setSubmitStatus] = useState("NONE");
     return (
-        <div className="contactRoot page">
+        <div className="contactRoot">
             <div className="contactPageGrid">
                 <div className="textDiv">
                     <div>

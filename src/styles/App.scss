@@ -5,7 +5,7 @@
     width: 100%;
     background-image:
         url("../img/bg-full.jpg");
-    background-size: contain; /* Resize the background image to cover the entire container */
+    background-size: 100% auto;
     background-repeat: repeat-x;
     color: $fg0;
     text-align: center;
@@ -38,9 +38,11 @@
 }
 
 .appContent-main {
-    backdrop-filter: blur(10px);
-    background: transparent; 
+    background: $bg0;
+    //backdrop-filter: blur(10px);
+    //background: transparent; 
     height: 100%;
+    min-height: 100vh;
     text-align: center;
 }
 @-moz-document url-prefix() {
