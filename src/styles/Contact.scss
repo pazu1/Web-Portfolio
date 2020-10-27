@@ -1,119 +1,119 @@
 @import "./theme.scss";
 
 .contactRoot {
-    width: 74%;
-    margin: auto;
-    text-align: left;
-    @media screen and (max-width: $small) {
-        width: 100%;
-    }
+  width: 74%;
+  margin: auto;
+  text-align: left;
+  @media screen and (max-width: $small) {
+    width: 100%;
+  }
 }
 
 .contactPageGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-gap: 50px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 50px;
+  justify-items: center;
 }
 .textDiv {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    div {
-        margin: auto;
-        background: $bg1;
-        padding: 28px;
-        box-shadow: 0 7px 14px rgba(0,0,0,.25), 0 5px 5px rgba(0,0,0,.22);
-        max-width: 280px;
-    }
-    a {
-        text-decoration: none;
-        color: $fg0;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin: auto;
+    background: $bg1;
+    padding: 28px;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    max-width: 280px;
+  }
+  a {
+    text-decoration: none;
+    color: $fg0;
+  }
 }
 .formContainer {
-    div {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        span {
-            padding: 16px;
-        }
+  div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      padding: 16px;
     }
-    min-width: 400px;
-    max-width: 420px;
-    @media screen and (max-width: $small) {
-        min-width: 90%;
-        margin:auto;
-    }
+  }
+  min-width: 400px;
+  max-width: 420px;
+  @media screen and (max-width: $small) {
+    min-width: 90%;
+    margin: auto;
+  }
 }
 
 .formBox {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 7px 14px rgba(0,0,0,.25), 0 5px 5px rgba(0,0,0,.22);
-    padding: 34px;
-    background: $bg0;
-    display: flex;
-    flex-direction: column;
-    min-height: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  padding: 34px;
+  background: $bg0;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
 }
 
 form {
-    //transform: scale(1);
-    display: inline-block;
-    transition: all 0.3s ease;
+  //transform: scale(1);
+  display: inline-block;
+  transition: all 0.3s ease;
+  button {
+    width: 130px;
+    margin: auto;
+  }
+  div {
+    margin-top: 12px;
     button {
-        width: 130px;
-        margin: auto;
+      float: right;
     }
-    div {
-        margin-top: 12px;
-        button {
-            float: right;
-        }
-    }
-    ::placeholder {
-        font-style: italic;
-        color: $fg1;
-    }
-    label {
-        color: $acc0;
-        transition: all 0.2s ease;
-    }
+  }
+  ::placeholder {
+    font-style: italic;
+    color: $fg1;
+  }
+  label {
+    color: $acc0;
+    transition: all 0.2s ease;
+  }
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    min-height: 120px;
-    max-height: 300px;
-    resize: vertical;
-    background: $bg1;
-    color: $fg0;
-    outline:none;
-    border: solid 1px $bg1;
-    &:focus {
-        border: solid 1px $acc0;
-    }
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  min-height: 120px;
+  max-height: 300px;
+  resize: vertical;
+  background: $bg1;
+  color: $fg0;
+  outline: none;
+  border: solid 1px $bg1;
+  &:focus {
+    border: solid 1px $acc0;
+  }
 }
 
-input[type=text], input[type=email] {
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 8px;
-    left: 0px;
-    background: $bg1;
-    color: $fg0;
-    outline:none;
-    border: solid 1px $bg1;
-    &:focus {
-        border: solid 1px $acc0;
-    }
+input[type="text"],
+input[type="email"] {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 8px;
+  left: 0px;
+  background: $bg1;
+  color: $fg0;
+  outline: none;
+  border: solid 1px $bg1;
+  &:focus {
+    border: solid 1px $acc0;
+  }
 }
-
