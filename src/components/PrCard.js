@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, lazy, Suspense } from "react";
 import { useSpring, animated } from "react-spring";
 import { MarkGithubIcon, LinkExternalIcon } from "@primer/octicons-react";
 import "../styles/Projects.scss";
+const PrPreview = lazy(() => import("./PrPreview"));
 
 const LABELS = {
   react: "react-logo.png",
@@ -37,18 +38,9 @@ function PrCard(props) {
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: aniProps.xys.interpolate(trans) }}
     >
-      <div
-        style={
-          img
-            ? {
-                backgroundImage: `url(${img})`,
-              }
-            : null
-        }
-        className="preview"
-      >
-        {!img ? title : null}
-      </div>
+      <Suspense fallback={<div>Loading preview...</div>}>
+        <PrPreview img={img} title={title} />
+      </Suspense>
       <div className="sidebar">
         {description}
         <table className="imgContainer">

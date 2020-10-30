@@ -6,7 +6,9 @@ function About() {
   return (
     <div className="page">
       <div className="aboutContainer">
-        <p style={{ paddingLeft: "5%", paddingRight: "5%" }}>
+        <p
+          style={{ textAlign: "left", paddingLeft: "10%", paddingRight: "10%" }}
+        >
           Hi!
           <br />
           <br />

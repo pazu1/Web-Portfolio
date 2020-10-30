@@ -23,9 +23,12 @@ function NavBar({ history, location }) {
           // place the headers on top of each other to have a complete flip animation
           <Transition
             items={show}
-            from={{ opacity: 0, transform: "rotateX(180deg)" }}
-            enter={{ opacity: 1, transform: "rotateX(0deg)" }}
-            leave={[{ display: "none" }]}
+            enter={{ position: "absolute" }}
+            from={{ opacity: 0, transform: "scaleY(0)" }}
+            enter={{ opacity: 1, transform: "scaleY(1)" }}
+            leave={[
+              { position: "absolute", opacity: 0, transform: "scaleY(0)" },
+            ]}
           >
             {(show) =>
               show &&
