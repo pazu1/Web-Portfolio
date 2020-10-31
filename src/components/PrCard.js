@@ -1,4 +1,4 @@
-import React, { useRef, lazy, Suspense } from "react";
+import React, { useRef, lazy, Suspense, useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { MarkGithubIcon, LinkExternalIcon } from "@primer/octicons-react";
 import "../styles/Projects.scss";
@@ -19,7 +19,8 @@ const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x / 10}deg) rotateY(${y / 10}deg) scale(${s})`;
 
 function PrCard(props) {
-  const { title, img, site, labels, source, description } = props.data;
+  const { title, img, site, labels, source, description, notitle } = props.data;
+  const [hoverOn, setHoverOn] = useState("");
   const [aniProps, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
@@ -42,11 +43,29 @@ function PrCard(props) {
         <PrPreview img={img} title={title} />
       </Suspense>
       <div className="sidebar">
-        {description}
+        <span>
+          {notitle ? null : (
+            <>
+              <strong>{title}</strong>
+              <br />
+              <br />
+            </>
+          )}
+          {description}
+        </span>
         <table className="imgContainer">
           {" "}
           {labels.map((l) => (
-            <img width="32px" src={LABELS[l]} alt={l}></img>
+            <span
+              className="techimgContainer"
+              onMouseMove={() => setHoverOn(l)}
+              onMouseLeave={() => setHoverOn("")}
+            >
+              <span className={hoverOn === l ? "techimgtt-hover" : "techimgtt"}>
+                {l}
+              </span>
+              <img width="32px" src={LABELS[l]} alt={l}></img>
+            </span>
           ))}
         </table>
         {site ? (

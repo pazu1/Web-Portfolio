@@ -37,11 +37,35 @@
 }
 
 .imgContainer {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
   img {
     vertical-align: middle;
     padding-left: 4px;
     padding-right: 4px;
+  }
+  .techimgContainer{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    padding: 4px;
+    .techimgtt {
+      display: inline-block;
+      overflow: hidden;
+      transition: transform 0.2s;
+      color: $acc0;
+      width: 0px;
+      transform: scale(0);
+      &-hover {
+        @extend .techimgtt;
+        transform: scale(1);
+        width: auto;
+      }
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 export const prcards = [
   {
-    title: "Simple Kanban",
+    title: "SimpleKanban.xyz",
     description: "Kanban-board web-application for managing projects.",
     img: "kanban-demo.gif",
     site: "https://simple-kanban.xyz/",
@@ -29,5 +29,6 @@ export const prcards = [
       "The source code of this portfiolio page is available on my GitHub",
     labels: ["react"],
     source: "https://github.com/pazu1/Web-Portfolio",
+    notitle: true,
   },
 ];
