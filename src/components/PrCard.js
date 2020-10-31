@@ -61,10 +61,10 @@ function PrCard(props) {
               onMouseMove={() => setHoverOn(l)}
               onMouseLeave={() => setHoverOn("")}
             >
+              <img width="32px" src={LABELS[l]} alt={l}></img>
               <span className={hoverOn === l ? "techimgtt-hover" : "techimgtt"}>
                 {l}
               </span>
-              <img width="32px" src={LABELS[l]} alt={l}></img>
             </span>
           ))}
         </table>
